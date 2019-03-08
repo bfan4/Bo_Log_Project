@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="css/grid.css">
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -15,93 +16,21 @@
 
 <body>
     <style>
-        .nav {
-            height: 64px;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.36);
-            position: fixed;
-            display: table;
-        }
 
-        .nav .nav-button {
-            background: none;
-            border: none;
-            height: 64px;
-            padding: 16px;
-            width: 64px;
-            float: right;
-        }
-
-        .nav .nav-button>.fa-bars {
-            font-size: 32px;
-            width: 32px;
-            height: 32px;
-            color: whitesmoke;
-        }
-        
-        .nav .nav-list {
-            list-style: none;
-            padding: 0;
-            position: absolute;
-            margin: 0;
-            top: 64px;
-            background-color: rgba(0,0,0,0.36);
-            width: 100%;
-        }
-        
-        .nav .nav-list > .nav-list-item {
-            height: 64px;
-            margin: 0 8px;
-            padding: 0 8px;
-            line-height: 64px;
-        }
-        
-        .nav .nav-list > .nav-list-item:hover{
-            background-color: rgba(0,0,0,0.16);
-        }
-        
-        .nav .nav-list > .nav-list-item > a {
-            text-decoration: none;
-            color: white;
-            display: inline-block;
-            width: 100%;
-        }
-        @media (min-width: 992px) {
-            .nav .nav-button{
-                display: none;
-            }
-            .nav .nav-list {
-                display: block !important;
-                position: static;
-                background-color: transparent;
-                top: auto;
-                float: right;
-                width: auto;
-            }.nav .nav-list > .nav-list-item{
-                float: left;
-            }
-        }
     </style>
     <header>
         <nav class="nav">
-           <ul class="nav-list">
-               <li class="nav-list-item"><a href="https://www.fackbook.com">Facebook</a></li>
-               <li class="nav-list-item"><a href="https://www.google.com">Google</a></li>
-               <li class="nav-list-item"><a href="https://www.github.com">Github</a></li>
-           </ul>
+            <ul class="nav-list">
+                <li class="nav-list-item"><a href="https://www.fackbook.com">Facebook</a></li>
+                <li class="nav-list-item"><a href="https://www.google.com">Google</a></li>
+                <li class="nav-list-item"><a href="https://www.github.com">Github</a></li>
+            </ul>
             <button type="button" class="nav-button">
                 <i class="fa fa-bars" aria-hidden="true"></i>
             </button>
         </nav>
     </header>
-    <script>
-        $(function(){
-            $(".nav-button").click(function(){
-                $(".nav-list").slideToggle();
-            })
-        })
-    </script>
-    
+
     <main>
         <section>
             <!--  Welcome  -->
@@ -165,6 +94,13 @@
         </div>
 
     </footer>
+    <script>
+        $(function() {
+            $(".nav-button").click(function() {
+                $(".nav-list").slideToggle();
+            })
+        })
+    </script>
 
 
 
